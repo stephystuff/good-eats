@@ -1,0 +1,29 @@
+body{
+  background-image: url('../images/salad.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title{
+  color: #fff;
+  font-family: $homepageFont;
+  font-size: 4em;
+  text-align: center;
+}
+
+.login {
+  background-color: $homepageButtonColor;
+  border-color: $homepageButtonColor;
+  width: 250px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.sign-up{
+  background-color: $homepageButtonColor;
+  border-color: $homepageButtonColor;
+  width: 250px;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+}
