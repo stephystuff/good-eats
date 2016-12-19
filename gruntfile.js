@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         }
       }
     },
+    
     copy: {
       html: {
         files: [
@@ -24,9 +25,16 @@ module.exports = function(grunt) {
             cwd: 'src/',
             src: 'index.html',
             dest: 'build/'
+          },
+          {
+            expand: true,
+            cwd: 'src/',
+            src: 'src/views/**/*.js',
+            dest: 'build/'
           }
         ]
       },
+
         images: {
           files: [
             {
@@ -37,12 +45,7 @@ module.exports = function(grunt) {
             }
           ]
         },
-        // concat: {
-        //   js: {
-        //     src: ['src/js/**/*.js'],
-        //     dest: 'build/js/app.js'
-        //   }
-        // },
+
         vendorjs: {
           files: [
             {
@@ -50,15 +53,29 @@ module.exports = function(grunt) {
               cwd: 'node_modules/angular/',
               src: ['angular.js'],
               dest: 'build/js'
+            },
+            {
+              expand: true,
+              cwd: 'node_modules/angular-ui-router/release',
+              src: ['angular-ui-router.js'],
+              dest: 'build/js'
             }
           ]
         }
       },
+
       sass: {
         allStyles: {
           files: {
             'build/css/styles.css': 'src/sass/main.scss'
           }
+        }
+      },
+
+      concat: {
+        js: {
+          src: ['src/js/good-eats.js', 'src/js/**/*.js'],
+          dest: 'build/js/app.js'
         }
       },
 
@@ -85,11 +102,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', [ 'clean', 'sass', 'copy' ]);
+    grunt.registerTask('default', [ 'clean', 'sass', 'copy', 'concat' ]);
 
 };
