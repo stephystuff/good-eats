@@ -37,12 +37,12 @@ module.exports = function(grunt) {
             }
           ]
         },
-        concat: {
-          js: {
-            src: ['src/js/**/*.js'],
-            dest: 'build/js/app.js'
-          }
-        },
+        // concat: {
+        //   js: {
+        //     src: ['src/js/**/*.js'],
+        //     dest: 'build/js/app.js'
+        //   }
+        // },
         vendorjs: {
           files: [
             {
@@ -85,11 +85,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    // grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', [ 'clean', 'sass', 'copy', 'concat' ]);
+    grunt.registerTask('default', [ 'clean', 'sass', 'copy' ]);
 
 };
