@@ -14,12 +14,12 @@
         name: 'home',
         url: '/',
         templateUrl: 'views/home.template.html'
-      })
-      .state({
-        name: 'sign-up',
-        url: 'sign-up',
-        templateUrl: 'views/sign-up.template.html'
       });
+      // .state({
+      //   name: 'sign-up',
+      //   url: 'sign-up',
+      //   templateUrl: 'views/sign-up.template.html'
+      // });
 
   }
 
