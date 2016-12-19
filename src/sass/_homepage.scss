@@ -2,12 +2,13 @@ body{
   background-image: url('../images/salad.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 .title{
   color: #fff;
   font-family: $homepageFont;
-  font-size: 4em;
+  font-size: 6em;
   text-align: center;
 }
 
@@ -17,6 +18,7 @@ body{
   width: 250px;
   border-radius: 4px;
   color: #fff;
+  margin-left: 400px;
 }
 
 .sign-up{
@@ -25,5 +27,13 @@ body{
   width: 250px;
   border-radius: 4px;
   color: #fff;
-  display: block;
+  margin-left: 50px;
+}
+
+.homepage{
+  position: absolute;
+  top: 50%;
+  // margin: auto;
+  margin-top: -100px;
+  width: 100%;
 }
