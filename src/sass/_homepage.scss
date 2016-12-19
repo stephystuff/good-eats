@@ -5,17 +5,18 @@ body{
 
 }
 
-// .container{
+// div{
 //   position: relative;
 //   width: 100%;
 // }
 //
-// .container img{
+// div img::after{
+//   content: "";
+//   background-image: url('../images/salad.jpg');
 //   position: absolute;
 //   left: 0;
 //   top: 0;
 //   width: 100%;
-//   height: auto;
 //   opacity: 0.6;
 // }
 
