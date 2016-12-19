@@ -1,1 +1,4 @@
 node_modules/
+build/
+.sass-cache/
+.DS_Store
