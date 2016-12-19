@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     copy: {
       html: {
         files: [
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: 'src/views/**/*.js',
+            src: 'views/**',
             dest: 'build/'
           }
         ]
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 
       concat: {
         js: {
-          src: ['src/js/good-eats.js', 'src/js/**/*.js'],
+          src: ['src/js/good-eats.module.js', 'src/js/**/*.js'],
           dest: 'build/js/app.js'
         }
       },
