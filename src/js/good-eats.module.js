@@ -21,8 +21,8 @@
         name: 'sign-up',
         url: '/sign-up',
         templateUrl: 'views/sign-up.template.html',
-        controller: 'UserStatusController',
-        controllerAs: 'status'
+        // controller: 'UserStatusController',
+        // controllerAs: 'status'
       });
 
   }
