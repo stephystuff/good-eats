@@ -78,7 +78,7 @@ body{
 
 }
 
-/* Desktop Styles */
+/* Laptop Styles */
 @media screen and (min-width: 1024px) {
   .title{
     color: #fff;
@@ -99,5 +99,28 @@ body{
   .home-buttons{
     margin-right: 100px;
     margin-left: 125px;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1440px) {
+  .title{
+    color: #fff;
+    font-family: $homepageFont;
+    font-size: 6em;
+    text-align: center;
+  }
+
+  .homepage{
+    position: absolute;
+    top: 50%;
+    // margin: auto;
+    margin-top: -100px;
+    width: 100%;
+    margin-left: 100px;
+  }
+
+  .home-buttons{
+    margin-left: 350px;
   }
 }
