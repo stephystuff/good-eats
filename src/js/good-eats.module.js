@@ -13,13 +13,17 @@
       .state({
         name: 'home',
         url: '/',
-        templateUrl: 'views/home.template.html'
+        templateUrl: 'views/home.template.html',
+        controller: 'HomePageController',
+        controllerAs: 'homepage'
+      })
+      .state({
+        name: 'sign-up',
+        url: '/sign-up',
+        templateUrl: 'views/sign-up.template.html',
+        controller: 'UserStatusController',
+        controllerAs: 'status'
       });
-      // .state({
-      //   name: 'sign-up',
-      //   url: 'sign-up',
-      //   templateUrl: 'views/sign-up.template.html'
-      // });
 
   }
 
