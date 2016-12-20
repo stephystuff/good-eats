@@ -10,7 +10,6 @@
     this.signUp = function signUp(){
       $state.go('sign-up');
     };
-
   }
 
 }());
