@@ -2,23 +2,7 @@ body{
   background-image: url('../images/salad.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
 }
-
-// div{
-//   position: relative;
-//   width: 100%;
-// }
-//
-// div img::after{
-//   content: "";
-//   background-image: url('../images/salad.jpg');
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   opacity: 0.6;
-// }
 
 .title{
   color: #fff;
@@ -33,7 +17,7 @@ body{
   width: 250px;
   border-radius: 4px;
   color: #fff;
-  margin-left: 400px;
+  // margin-left: 400px;
 }
 
 .sign-up{
@@ -42,13 +26,71 @@ body{
   width: 250px;
   border-radius: 4px;
   color: #fff;
-  margin-left: 50px;
+  // margin-left: 50px;
 }
 
-.homepage{
-  position: absolute;
-  top: 50%;
-  // margin: auto;
-  margin-top: -100px;
-  width: 100%;
+.home-buttons{
+ margin-right: 300px;
+}
+
+// .homepage{
+//   position: absolute;
+//   top: 50%;
+//   // margin: auto;
+//   margin-top: -100px;
+//   width: 100%;
+// }
+
+// Responsive Styles //
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+  .title{
+    color: #fff;
+    font-family: $homepageFont;
+    font-size: 6em;
+    text-align: center;
+    margin-right: 250px;
+  }
+
+  .login {
+    background-color: $homepageButtonColor;
+    border-color: $homepageButtonColor;
+    width: 250px;
+    border-radius: 4px;
+    color: #fff;
+  }
+
+  .sign-up{
+    display: inline;
+    background-color: $homepageButtonColor;
+    border-color: $homepageButtonColor;
+    width: 250px;
+    border-radius: 4px;
+    color: #fff;
+  }
+
+  .homepage{
+    position: absolute;
+    top: 50%;
+    // margin: auto;
+    margin-top: -100px;
+    width: 100%;
+    margin-left: 100px;
+  }
+
+  .home-buttons{
+    margin-left: 125px;
+  }
+
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .title{
+    color: #fff;
+    font-family: $homepageFont;
+    font-size: 6em;
+    text-align: center;
+  }
 }
