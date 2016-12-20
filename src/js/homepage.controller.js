@@ -11,9 +11,6 @@
       $state.go('sign-up');
     };
 
-    this.tester = function tester() {
-      console.log('Working');
-    };
   }
 
 }());
