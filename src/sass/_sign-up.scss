@@ -11,6 +11,7 @@
   h1{
     font-family: $headingFont;
     color: $signUpFormHeadingColor;
+    font-size: 2em;
   }
 
   input{
@@ -19,6 +20,12 @@
 
   #sign-up{
     margin-bottom: 20px;
+  }
+
+  .submit{
+    color: #fff;
+    background-color: $buttonColor;
+    border-color: $buttonColor;
   }
 }
 
@@ -30,13 +37,15 @@
     margin-top: 100px;
     width: 400px;
 
+    h1{
+      font-size: 4em;
+    }
+
     input{
       width: 200px;
       padding: 0;
     }
   }
-
-
 }
 
 /* Laptop Styles */
@@ -45,6 +54,10 @@
     margin: 0 auto;
     margin-top:50px;
     width: 500px;
+
+    h1{
+      font-size: 5em;
+    }
 
     input{
       width: 400px;
@@ -63,6 +76,9 @@
       width: 400px;
       padding: 10px;
     }
-  }
 
+    h1{
+      font-size: 6em;
+    }
+  }
 }
