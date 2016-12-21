@@ -11,8 +11,8 @@ body{
 }
 
 .login {
-  background-color: $homepageButtonColor;
-  border-color: $homepageButtonColor;
+  background-color: $buttonColor;
+  border-color: $buttonColor;
   width: 250px;
   border-radius: 4px;
   color: #fff;
@@ -20,8 +20,8 @@ body{
 }
 
 .sign-up{
-  background-color: $homepageButtonColor;
-  border-color: $homepageButtonColor;
+  background-color: $buttonColor;
+  border-color: $buttonColor;
   width: 250px;
   border-radius: 4px;
   color: #fff;
@@ -46,8 +46,6 @@ body{
   }
 
   .login {
-    background-color: $homepageButtonColor;
-    border-color: $homepageButtonColor;
     width: 250px;
     border-radius: 4px;
     color: #fff;
@@ -55,8 +53,6 @@ body{
 
   .sign-up{
     display: inline;
-    background-color: $homepageButtonColor;
-    border-color: $homepageButtonColor;
     width: 250px;
     border-radius: 4px;
     color: #fff;
