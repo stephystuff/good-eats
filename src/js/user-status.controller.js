@@ -11,5 +11,4 @@
       $state.go('all-posts');
     };
   }
-
 }());
