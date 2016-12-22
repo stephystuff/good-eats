@@ -1,4 +1,27 @@
+
+.navbar-default {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+
+  button {
+    position: relative;
+  }
+
+  .navbar-brand {
+    position: relative;
+
+  }
+
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+  }
+}
+
 .post-list{
+  list-style: none;
 
   li{
     margin: 0 auto;
@@ -7,5 +30,18 @@
   .btn-primary{
     background-color: $buttonColor;
     color: #fff;
+  }
+}
+
+/* Desktop Styles */
+
+@media screen and (min-width: 1440px) {
+  .post-list{
+
+    li{
+      float: left;
+      clear: both;
+    }
+
   }
 }
