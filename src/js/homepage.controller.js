@@ -10,6 +10,18 @@
     this.signUp = function signUp(){
       $state.go('sign-up');
     };
+
+    this.allPosts = function allPosts() {
+      $state.go('all-posts');
+    };
+
+    $('.login').click(function hideSignUp() {
+        $('.sign-up').hide(function showLoginForm(){
+          $('.login-form').show();
+        });
+    });
+
   }
+
 
 }());
