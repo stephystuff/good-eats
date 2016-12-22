@@ -3,6 +3,12 @@ body{
   background-size: cover;
 }
 
+.homepage{
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-left: 5px;
+}
+
 .title{
   color: #fff;
   font-family: $headingFont;
@@ -19,13 +25,22 @@ body{
   margin-bottom: 15px;
 }
 
+.login-form{
+  display: none;
+}
+
+.submit-login{
+  background-color: $buttonColor;
+  color: #fff;
+}
+
 .sign-up{
   background-color: $buttonColor;
   border-color: $buttonColor;
   width: 250px;
   border-radius: 4px;
   color: #fff;
-  // margin-left: 50px;
+  margin-top: 15px;
 }
 
 
@@ -71,7 +86,6 @@ body{
     margin-right: 15px;
     margin-left: 25px;
   }
-
 }
 
 /* Laptop Styles */
