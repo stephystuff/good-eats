@@ -28,6 +28,15 @@
         name: 'all-posts',
         url: '/all-posts',
         templateUrl: 'views/all-posts.template.html',
+        controller: 'PostsService',
+        controllerAs: 'posts'
+      })
+      .state({
+        name: 'create-post',
+        url: '/create-post',
+        templateUrl: 'views/create-post.template.html',
+        controller: 'PostsController',
+        controllerAs: 'posts'
       });
 
   }
