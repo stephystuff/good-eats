@@ -28,7 +28,7 @@
         name: 'all-posts',
         url: '/all-posts',
         templateUrl: 'views/all-posts.template.html',
-        controller: 'PostsService',
+        controller: 'PostsController',
         controllerAs: 'posts'
       })
       .state({
