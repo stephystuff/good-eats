@@ -53,9 +53,6 @@ body{
 /* tablet styles */
 @media screen and (min-width: 768px) {
   .title{
-    color: #fff;
-    font-family: $headingFont;
-    font-size: 6em;
     text-align: center;
     margin-right: 250px;
   }
@@ -64,6 +61,10 @@ body{
     width: 250px;
     border-radius: 4px;
     color: #fff;
+  }
+
+  .login-form{
+    margin-left: 25px;
   }
 
   .sign-up{
@@ -76,7 +77,6 @@ body{
   .homepage{
     position: absolute;
     top: 50%;
-    // margin: auto;
     margin-top: -100px;
     width: 100%;
     margin-left: 100px;
@@ -90,47 +90,23 @@ body{
 
 /* Laptop Styles */
 @media screen and (min-width: 1024px) {
-  .title{
-    color: #fff;
-    font-family: $headingFont;
-    font-size: 6em;
-    text-align: center;
-  }
-
-  .homepage{
-    position: absolute;
-    top: 50%;
-    // margin: auto;
-    margin-top: -100px;
-    width: 100%;
-    margin-left: 100px;
-  }
-
   .home-buttons{
     margin-right: 100px;
+    margin-left: 125px;
+  }
+
+  .login-form{
     margin-left: 125px;
   }
 }
 
 /* Desktop Styles */
 @media screen and (min-width: 1440px) {
-  .title{
-    color: #fff;
-    font-family: $headingFont;
-    font-size: 6em;
-    text-align: center;
-  }
-
-  .homepage{
-    position: absolute;
-    top: 50%;
-    // margin: auto;
-    margin-top: -100px;
-    width: 100%;
-    margin-left: 100px;
-  }
-
   .home-buttons{
+    margin-left: 350px;
+  }
+
+  .login-form{
     margin-left: 350px;
   }
 }
