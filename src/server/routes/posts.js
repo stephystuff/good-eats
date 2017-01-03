@@ -6,7 +6,7 @@
 
   var router = express.Router();
 
-  router.get('/', function allPosts(req, res) {
+  router.get('/', function getPosts(req, res) {
     postsModel.getPosts(function retrieveData(err, data) {
       res.json(data);
     });
