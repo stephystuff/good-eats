@@ -1,5 +1,28 @@
 <h1 class='post-item'>Post New Item</h1>
 
-<form class='add-post' ng-submit=''>
+<form class='add-post' ng-submit='posts.addPost()'>
+  <aside>
+    <label for="dish-name" placeholder='what did you eat'></label>
+    <input type="text" id='dish-name' ng-model='posts.postDetails.dishName'>
+  </aside>
+  <aside>
+    <label for='restaurant-name' placholder='name of restaurant'></label>
+    <input type='text' id='restaurant-name' ng-model='posts.postDetails.restaurant'>
+  </aside>
+  <aside>
+    <label for='cuisine-type' placeholder='cuisine type'></label>
+    <input type='text' id='cuisine-type' ng-model='posts.postDetails.cuisineType'>
+  </aside>
+  <aside>
+    <label for='uploaded-photo' placeholder='upload a pic'></label>
+    <input type='file' id='uploaded-photo' ng-model='posts.postDetails.photo'>
+  </aside>
+  <aside>
+    <label for='comment' placeholder='share your dish story...'></label>
+    <input type='text' id='comment' ng-model='posts.postDetails.comment'>
+  </aside>
+  <aside>
+    <input type='submit' id='submit-post' value= 'submit'>
+  </aside>
 
 </form>
