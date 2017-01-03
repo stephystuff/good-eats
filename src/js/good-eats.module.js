@@ -37,6 +37,13 @@
         templateUrl: 'views/create-post.template.html',
         controller: 'PostsController',
         controllerAs: 'posts'
+        })
+      .state({
+        name: 'post-created',
+        url: '/post-created',
+        templateUrl: 'views/post-created.template.html',
+        controller: 'PostsController',
+        controllerAs: 'posts'
       });
 
   }
