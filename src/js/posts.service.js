@@ -18,7 +18,7 @@
     function createPost(dishName, restaurant, cuisineType, photo, comment) {
       return $http({
         url: '/posts',
-        data: JSON.stringify({
+        data: angular.toJson({
           dishName: dishName,
           restaurant: restaurant,
           cuisineType: cuisineType,
@@ -39,12 +39,12 @@
 
     function getPosts(){
       return $http({
-        url: '/all-posts',
+        url: '/posts',
         method: 'get'
       })
       .then(function returnPosts(response){
         console.log('posts', response);
-        return response;
+        return response.data;
       });
     }
   }
