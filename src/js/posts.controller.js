@@ -8,8 +8,19 @@
 
     function PostsController($state, PostsService) {
       var vm = this;
+      this.posts = [];
       this.postsDetails = {};
       this.errorMessage = {};
+
+      PostsService.getPosts()
+        .then(function success(data){
+          console.log('post data retrieved in ctrl', data);
+          vm.posts = data;
+          // return data;
+        })
+        .catch(function error(xhr){
+          console.log(xhr);
+        });
 
       this.addPost = function addPost() {
         console.log("In add post");
@@ -33,19 +44,7 @@
         });
       };
 
-      vm.getAllPosts = function getAllPosts(){
-        console.log('in getAllPosts');
-        PostsService.getPosts
-          .then(function success(posts){
-            console.log(posts);
-            return posts;
-          })
-          .catch(function error(xhr){
-            console.log(xhr);
-          });
 
-
-      };
-    }
+      }
 
 }());
