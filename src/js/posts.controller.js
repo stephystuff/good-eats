@@ -12,14 +12,16 @@
       this.errorMessage = {};
 
       this.addPost = function addPost() {
+        console.log("In add post");
         PostsService.createPost(
           this.postDetails.dishName,
-          this.postDetails.restaurantName,
+          this.postDetails.restaurant,
           this.postDetails.cuisineType,
-          this.postDetails.uploadedPhoto
+          this.postDetails.photo,
+          this.postDetails.comment
         )
         .then(function success(data) {
-          state.go('all-posts');
+          $state.go('post-created');
         })
         .catch(function error(xhr) {
           console.log(xhr);
@@ -29,6 +31,20 @@
             vm.errorMessage.statusResponse = 'Our system is down! Please try again';
           }
         });
+      };
+
+      vm.getAllPosts = function getAllPosts(){
+        console.log('in getAllPosts');
+        PostsService.getPosts
+          .then(function success(posts){
+            console.log(posts);
+            return posts;
+          })
+          .catch(function error(xhr){
+            console.log(xhr);
+          });
+
+
       };
     }
 
