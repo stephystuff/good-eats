@@ -10,25 +10,41 @@
 
     return {
       createPost: createPost,
-      getPosts: getPosts,
-      getPost: getPost,
-      deletePost: deletePost
+      getPosts: getPosts
+      // getPost: getPost,
+      // deletePost: deletePost
     };
 
-    function createPost(dishName, restaurantName, cuisineType, uploadedPhoto) {
+    function createPost(dishName, restaurant, cuisineType, photo, comment) {
       return $http({
         url: '/posts',
-        data: {
+        data: JSON.stringify({
           dishName: dishName,
-          restaurantName: restaurantName,
+          restaurant: restaurant,
           cuisineType: cuisineType,
-          uploadedPhoto: uploadedPhoto
-        },
-        method: 'post',
-        headers: {'ContentType': 'applications.json'}
+          photo: photo,
+          comment: comment
+        }),
+        method: 'POST',
+        dataType: 'json',
+        headers: {
+                'Content-Type': 'application/json'
+            }
       })
       .then(function returnResponse(response) {
+        console.log('in createPost', response);
         return response.data;
+      });
+    }
+
+    function getPosts(){
+      return $http({
+        url: '/all-posts',
+        method: 'get'
+      })
+      .then(function returnPosts(response){
+        console.log('posts', response);
+        return response;
       });
     }
   }
