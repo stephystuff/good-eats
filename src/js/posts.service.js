@@ -10,9 +10,9 @@
 
     return {
       createPost: createPost,
-      getPosts: getPosts
+      getPosts: getPosts,
       // getPost: getPost,
-      // deletePost: deletePost
+      deletePost: deletePost
     };
 
     function createPost(dishName, restaurant, cuisineType, photo, comment) {
@@ -44,6 +44,17 @@
       })
       .then(function returnPosts(response){
         console.log('posts', response);
+        return response.data;
+      });
+    }
+
+    function deletePost(postId){
+      return $http({
+        url: '/posts' + '/' + postId,
+        method: 'delete'
+      })
+      .then(function success(data){
+        console.log(data);
         return response.data;
       });
     }

@@ -13,12 +13,12 @@
       this.errorMessage = {};
 
       PostsService.getPosts()
-        .then(function success(data){
+        .then(function successHandler(data){
           console.log('post data retrieved in ctrl', data);
           vm.posts = data;
           // return data;
         })
-        .catch(function error(xhr){
+        .catch(function errorHandler(xhr){
           console.log(xhr);
         });
 
@@ -31,7 +31,7 @@
           this.postDetails.photo,
           this.postDetails.comment
         )
-        .then(function success(data) {
+        .then(function successHandler(data) {
           $state.go('post-created');
         })
         .catch(function error(xhr) {
@@ -44,7 +44,17 @@
         });
       };
 
+      vm.removePost = function removePost(){
+        PostsService.deletePost()
+          .then(function successHandler(data){
+            console.log(data);
+          })
+          .catch(function errorHandler(xhr){
+            console.log(xhr);
+          });
+      };
 
-      }
+
+    }
 
 }());
