@@ -22,12 +22,24 @@
         return;
       }
       res.json({
+        'id': data.ops[0]._id,
         'dishName': data.ops[0].dishName,
         'restaurant': data.ops[0].restaurant,
         'cuisineType': data.ops[0].cuisineType,
         'photo': data.ops[0].photo,
         'comment': data.ops[0].comment
       });
+    });
+  });
+
+  router.delete('/:id([a-f0-9] {24})',function deletePost(req, res){
+    postsModel.deletePost(req.params.id, function createDeleteData(err, data){
+        if (err) {
+          console.error(err);
+          res.status(500).send('couldn\'t get your data');
+          return;
+        }
+        res.json(data);
     });
   });
 
