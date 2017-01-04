@@ -44,8 +44,14 @@
         templateUrl: 'views/post-created.template.html',
         controller: 'PostsController',
         controllerAs: 'posts'
+      })
+      .state({
+        name: 'post-deleted',
+        url: '/post-deleted',
+        templateUrl: 'views/post-deleted.template.html',
+        controller: 'PostsController',
+        controllerAs: 'posts'
       });
-
   }
 
 }());
