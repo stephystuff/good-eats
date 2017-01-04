@@ -64,7 +64,7 @@
             <div class="caption">
               <h3>{{post.dishName}}</h3>
               <p>{{post.comment}}</p>
-              <p><a href="#" class="btn btn-primary" role="button">Details</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              <p><a href="#" class="btn btn-primary" role="button">Details</a> <a ui-sref='post-deleted' class="btn btn-default" ng-click='posts.removeJob(postId)'  role="button">Delete</a></p>
             </div>
           </div>
         </div>
