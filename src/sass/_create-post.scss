@@ -1,0 +1,72 @@
+.add-post-form {
+  // margin-top: 50px;
+  width: 250px;
+  margin: 25px auto;
+  padding-left: 40px;
+  // border: 1px solid $signUpFormBorderColor;
+  border-radius: 3px;
+  background-color: #fff;
+
+  h1{
+    font-family: $headingFont;
+    color: $signUpFormHeadingColor;
+    font-size: 2em;
+    }
+
+    aside{
+      margin-bottom: 20px;
+    }
+
+    #comment{
+      height: 100px;
+      border-color: $buttonColor;
+    }
+
+    input{
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid $buttonColor;
+    }
+
+    .submit-post {
+      color: #fff;
+      background-color: $buttonColor;
+      border-color: $buttonColor;
+    }
+}
+
+// Responsive Styles //
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+  .add-post-form {
+    margin: auto 0;
+    width: 400px;
+
+    input{
+      width: 350px;
+    }
+
+    textarea{
+      width: 350px;
+    }
+  }
+}
+
+/* Laptop Styles */
+@media screen and (min-width: 1024px) {
+  .add-post-form{
+    font-size: 2em;
+    width: 500px;
+
+    aside{
+      margin-bottom: 40px;
+    }
+    input{
+      width: 450px;
+    }
+    textarea{
+      width: 450px;
+    }
+  }
+}
