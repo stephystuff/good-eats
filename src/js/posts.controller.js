@@ -44,7 +44,7 @@
         });
       };
 
-      vm.removePost = function removePost(){
+      vm.removePost = function removePost(id){
         PostsService.deletePost()
           .then(function successHandler(data){
             console.log(data);
@@ -53,8 +53,6 @@
             console.log(xhr);
           });
       };
-
-
     }
 
 }());
