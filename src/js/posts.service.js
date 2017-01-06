@@ -11,7 +11,7 @@
     return {
       createPost: createPost,
       getPosts: getPosts,
-      // getPost: getPost,
+      getPost: getPost,
       deletePost: deletePost
     };
 
@@ -48,10 +48,22 @@
       });
     }
 
-    function deletePost(postId){
+    function getPost(id) {
       return $http({
-        url: '/posts' + '/' + postId,
-        method: 'delete'
+        url: '/posts' + '/' + id,
+        method: 'get',
+        dataType: 'json'
+      })
+      .then(function successHandler(data) {
+        console.log(data);
+        return response.data;
+      });
+    }
+
+    function deletePost(id){
+      return $http({
+        url: '/posts' + '/' + id,
+        method: 'delete',
       })
       .then(function success(data){
         console.log(data);
