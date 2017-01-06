@@ -1,3 +1,20 @@
-body.white-background{
-  background-color: white;
+.post-created{
+  text-align: center;
+  margin-top: 100px;
+  color: $postCreatedFontColor;
+  font-size: 2em;
+  font-family: $postCreatedFont;
+
+  .smiley{
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 70%;
+  }
+
+  .smile{
+    -webkit-transform: rotate(90deg);
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 70%;
+  }
 }
