@@ -2,9 +2,9 @@ var dbConnect = require('./db-connect');
 
 module.exports = {
   getPosts,
-  // getPost,
+  getPost,
   createPost,
-  deletePost
+  deletePost,
   // updatePost
 };
 
@@ -29,6 +29,28 @@ function createPost(data, done) {
     data.createTime = Date.now();
     db.collection('posts')
       .insert(data, done);
+  });
+}
+
+function getPost(data, done){
+  dbConnect(function connectHandler(err, db) {
+    if (err) {
+      done(err, null);
+      return;
+    }
+    var post = db.collection('posts')
+      .findOne({_id: ObjectId(data)}, function(err, data) {
+        newData = {
+          'id': data._id,
+          'dishName': data.dishName,
+          'restaurant': data.restaurant,
+          'cuisineType': data.cuisineType,
+          'photo': data.photo,
+          'comment': data.comment,
+          'createTime': data.createTime
+        };
+        done(dull, data);
+      });
   });
 }
 
