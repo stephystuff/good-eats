@@ -1,15 +1,16 @@
-<section class='homepage'>
-  <h1 class='title'>Good Eats</h1>
+<body class='home'>
+  <section class='homepage'>
+    <h1 class='title'>Good Eats</h1>
 
-  <aside class='home-buttons'>
-    <button ng-click='homepage.hideSignUp()' class='login'>Log In</button>
-    <button ng-click='homepage.signUp()' class='sign-up'>Sign Up</button>
-  </aside>
+    <aside class='home-buttons'>
+      <button ng-click='homepage.hideSignUp()' class='login'>Log In</button>
+      <button ng-click='homepage.signUp()' class='sign-up'>Sign Up</button>
+    </aside>
 
-  <form class='login-form' ng-submit='homepage.allPosts()'>
-    <input type="email" placeholder="email address">
-    <input type="password" placeholder="password">
-    <input class='submit-login' type="submit" value="sign in">
-  </form>
-
-</section>
+    <form class='login-form' ng-submit='homepage.allPosts()'>
+      <input type="email" placeholder="email address">
+      <input type="password" placeholder="password">
+      <input class='submit-login' type="submit" value="sign in">
+    </form>
+  </section>
+</body>
