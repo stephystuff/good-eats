@@ -21,19 +21,19 @@ body.all-posts{
   }
 }
 
-  .thumbnail {
-    width: 250px;
-    height: 400px;
-    margin-right: 15px;
-  }
+.thumbnail {
+  width: 250px;
+  height: 400px;
+  margin-right: 15px;
+}
 
- .fa-plus-square {
-    background-color: white;
-    border-radius: 4px;
-    color: $buttonColor;
-    font-size: 8em;
-    padding: 15px;
-    margin: 0 0 15px 30px;
+.fa-plus-square {
+  background-color: white;
+  border-radius: 4px;
+  color: $buttonColor;
+  font-size: 8em;
+  padding: 15px;
+  margin: 0 0 15px 30px;
 }
 
 .post-list{
@@ -53,6 +53,10 @@ body.all-posts{
 
 /* Tablet Styles */
 @media screen and (min-width: 768px) {
+  .post-list{
+    margin-left: 100px;
+  }
+
   .post-list-item{
     float: left;
   }
@@ -67,7 +71,7 @@ body.all-posts{
 
 /* Desktop Styles */
 @media screen and (min-width: 1440px) {
-    .post-list-item{
-      float: left;
-    }
+  .post-list-item{
+    float: left;
   }
+}
