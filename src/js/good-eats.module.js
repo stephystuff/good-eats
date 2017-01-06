@@ -51,6 +51,13 @@
         templateUrl: 'views/post-deleted.template.html',
         controller: 'PostsController',
         controllerAs: 'posts'
+      })
+      .state({
+        name: 'restaurant-details',
+        url: 'restaurant-details',
+        templateUrl: 'views/restaurant-details.tmeplate.html',
+        controller: 'RestaurantDetailsController',
+        controllerAs: 'restaurants'
       });
   }
 
