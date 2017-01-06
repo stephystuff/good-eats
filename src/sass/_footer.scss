@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+.footer, .push {
+  height: 5em;
+}
+.footer{
+  clear: both;
+  background: url('../images/salad.jpg') center no-repeat;
+  background-size: cover;
+}
+
+// Responsive Styles //
+
+/* Tablet Styles */
+@media screen and (min-width: 768px){
+  .footer, .push{
+    height: 8em;
+  }
+}
