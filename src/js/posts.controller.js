@@ -22,6 +22,18 @@
           console.log(xhr);
         });
 
+      this.getSinglePost = function getSinglePost(id) {
+        console.log("starting one post");
+        PostsService.getPost(id)
+          .then(function successHandler(data) {
+            console.log("got one post", data);
+          })
+          .catch(function errorHandler(xhr) {
+            console.log(xhur);
+          });
+      };
+
+
       this.addPost = function addPost() {
         console.log("In add post");
         PostsService.createPost(
@@ -45,7 +57,7 @@
       };
 
       vm.removePost = function removePost(id){
-        PostsService.deletePost()
+        PostsService.deletePost(id)
           .then(function successHandler(data){
             console.log(data);
           })
@@ -53,6 +65,15 @@
             console.log(xhr);
           });
       };
+
+      function showMoreDetails(){
+        console.log('clicking button');
+        $(".btn-primary").click(function() {
+            $(".alert").show();
+        });
+      }
     }
+
+
 
 }());
