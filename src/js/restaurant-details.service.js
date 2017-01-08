@@ -11,9 +11,9 @@
       getRestaurantDetails: getRestaurantDetails
     };
 
-    function getRestaurantDetails() {
+    function getRestaurantDetails(searchTerm) {
       return $http({
-        url: '/search',
+        url: '/posts/search',
         method: 'get'
       })
       .then(function successHandler(response) {
