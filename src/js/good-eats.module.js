@@ -18,6 +18,11 @@
         controllerAs: 'homepage'
       })
       .state({
+        name: 'about-us',
+        url: '/about-us',
+        templateUrl: 'views/about-us.template.html'
+      })
+      .state({
         name: 'sign-up',
         url: '/sign-up',
         templateUrl: 'views/sign-up.template.html',
