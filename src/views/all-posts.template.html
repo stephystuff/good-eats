@@ -10,11 +10,16 @@
             <div class="caption">
               <h3>{{post.dishName}}</h3>
               <p>{{post.comment}}</p>
-              <p><button class="btn btn-primary" type="button">Details</button> <button class="btn btn-default" ng-click='posts.removePost(postId)' type="button">Delete</button></p>
+              <p><button class="btn btn-primary" ng-click="posts.showMoreDetails()" type="button">Details</button> <button class="btn btn-default" ng-click='posts.removePost(postId)' type="button">Delete</button></p>
             </div>
           </div>
         </div>
       </div>
   </li>
   </ul>
+
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </div>
 </body>
