@@ -49,7 +49,7 @@ function getPost(data, done){
           'comment': data.comment,
           'createTime': data.createTime
         };
-        done(dull, data);
+        done(null, data);
       });
   });
 }
