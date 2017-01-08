@@ -23,15 +23,12 @@
 
   router.get('/search', function getRestaurantDetails(req, res) {
     console.log('in search');
-    oauth.get('https://api.yelp.com/v2/search?term=restaurants&location=20008', 'PtBYsX0jEl7D__I_6GVlVBWeMSpua1Rf', 'KBYnp6imgxsHAyU3kmyOnj3W0bw', function(e, data){
+    oauth.get('https://api.yelp.com/v2/search?term=restaurants&location=20720', 'PtBYsX0jEl7D__I_6GVlVBWeMSpua1Rf', 'KBYnp6imgxsHAyU3kmyOnj3W0bw', function(e, data){
       if (e) console.error(e);
       console.log(require('util').inspect(data));
       res.json(data);
     });
   });
-
-
-
 
   router.get('/:id([a-f0-9]{24})', function getPost(req, res) {
     postsModel.getPost(req.params.id, function createSingleData(err, data) {
