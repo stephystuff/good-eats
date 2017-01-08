@@ -1,0 +1,41 @@
+.navbar-default {
+  background-color: $buttonColor;
+  border-color: $buttonColor;
+  border-radius: 0;
+  height: 100px;
+
+  li:hover{
+    background-color: white;
+  }
+
+  .navbar-nav{
+    margin-top: 10px;
+  }
+
+  .navbar-brand{
+    margin-top: 10px;
+    font-family: $headingFont;
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .form-control{
+    margin-top: 10px;
+  }
+
+
+  button {
+    position: relative;
+  }
+
+  .navbar-brand {
+    position: relative;
+  }
+
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+  }
+}
