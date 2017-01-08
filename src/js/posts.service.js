@@ -19,6 +19,7 @@
       return $http({
         url: '/posts',
         data: angular.toJson({
+          id: _id,
           dishName: dishName,
           restaurant: restaurant,
           cuisineType: cuisineType,
@@ -50,9 +51,9 @@
 
     function getPost(id) {
       return $http({
-        url: '/posts' + '/' + id,
+        url: '/posts/' + id,
         method: 'get',
-        dataType: 'json'
+        // dataType: 'json'
       })
       .then(function successHandler(data) {
         console.log(data);
@@ -62,7 +63,7 @@
 
     function deletePost(id){
       return $http({
-        url: '/posts' + '/' + id,
+        url: '/posts/' + id,
         method: 'delete',
       })
       .then(function success(data){
