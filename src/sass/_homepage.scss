@@ -10,6 +10,10 @@
   margin: 0 auto;
   margin-top: 100px;
   margin-left: 5px;
+  background: url('../images/salad.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+
 }
 
 .title{
@@ -19,37 +23,37 @@
   text-align: left;
 }
 
-.login {
-  background-color: $buttonColor;
-  border-color: $buttonColor;
-  width: 250px;
-  border-radius: 4px;
-  color: #fff;
-  margin-bottom: 15px;
-}
+// .login {
+//   background-color: $buttonColor;
+//   border-color: $buttonColor;
+//   width: 250px;
+//   border-radius: 4px;
+//   color: #fff;
+//   margin-bottom: 15px;
+// }
+//
+// .login-form{
+//   display: none;
+// }
+//
+// .submit-login{
+//   background-color: $buttonColor;
+//   color: #fff;
+// }
+//
+// .sign-up{
+//   background-color: $buttonColor;
+//   border-color: $buttonColor;
+//   width: 250px;
+//   border-radius: 4px;
+//   color: #fff;
+//   margin-top: 15px;
+// }
 
-.login-form{
-  display: none;
-}
 
-.submit-login{
-  background-color: $buttonColor;
-  color: #fff;
-}
-
-.sign-up{
-  background-color: $buttonColor;
-  border-color: $buttonColor;
-  width: 250px;
-  border-radius: 4px;
-  color: #fff;
-  margin-top: 15px;
-}
-
-
-.home-buttons{
- // margin-right: 300px;
-}
+// .home-buttons{
+//  // margin-right: 300px;
+// }
 
 // Responsive Styles //
 
