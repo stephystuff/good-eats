@@ -1,25 +1,3 @@
-body.all-posts{
-  background-color: white;
-}
-.navbar-default {
-  background-color: $buttonColor;
-  border-color: $buttonColor;
-
-  button {
-    position: relative;
-  }
-
-  .navbar-brand {
-    position: relative;
-  }
-
-  img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-  }
-}
 
 .thumbnail {
   width: 250px;
@@ -47,6 +25,16 @@ body.all-posts{
     background-color: $buttonColor;
     color: #fff;
   }
+}
+
+.alert{
+  display: none;
+  width: 200px;
+  height: 100px;
+}
+
+.alert .show{
+  visibility: visible;
 }
 
 //Responsive Styles//
