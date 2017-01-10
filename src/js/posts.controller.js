@@ -4,9 +4,9 @@
     angular.module('good-eats')
       .controller('PostsController', PostsController);
 
-    PostsController.$inject = ['$state', 'PostsService'];
+    PostsController.$inject = ['$stateParams', '$state', 'PostsService'];
 
-    function PostsController($state, PostsService) {
+    function PostsController($stateParams, $state, PostsService) {
       var vm = this;
       this.posts = [];
       this.postsDetails = {};
@@ -22,14 +22,14 @@
           console.log(xhr);
         });
 
-      this.getSinglePost = function getSinglePost(id) {
+      vm.getSinglePost = function getSinglePost(id) {
         console.log("starting one post");
         PostsService.getPost(id)
           .then(function successHandler(data) {
             console.log("got one post", data);
           })
           .catch(function errorHandler(xhr) {
-            console.log(xhur);
+            console.log(xhr);
           });
       };
 
@@ -44,6 +44,7 @@
           this.postDetails.comment
         )
         .then(function successHandler(data) {
+          console.log(data);
           $state.go('post-created');
         })
         .catch(function error(xhr) {
@@ -56,22 +57,23 @@
         });
       };
 
-      vm.removePost = function removePost(id){
-        PostsService.deletePost(id)
-          .then(function successHandler(data){
-            console.log(data);
+      vm.removePost = function removePost(){
+        console.log('in delete');
+        PostsService.deletePost()
+          .then(function successHandler(id){
+            console.log(id);
           })
           .catch(function errorHandler(xhr){
             console.log(xhr);
           });
       };
 
-      function showMoreDetails(){
-        console.log('clicking button');
-        $(".btn-primary").click(function() {
-            $(".alert").show();
-        });
-      }
+      // function showMoreDetails(){
+      //   console.log('clicking button');
+      //   $(".btn-primary").click(function() {
+      //       $(".alert").show();
+      //   });
+      // }
     }
 
 
