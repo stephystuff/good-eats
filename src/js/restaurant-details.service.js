@@ -11,7 +11,12 @@
       getRestaurantDetails: getRestaurantDetails
     };
 
-    function getRestaurantDetails(searchTerm) {
+    /**
+     * [getRestaurantDetails description]
+     * @param  {[type]} searchTerm [description]
+     * @return {[type]}            [description]
+     */
+    function getRestaurantDetails() {
       return $http({
         url: '/posts/search',
         method: 'get'
