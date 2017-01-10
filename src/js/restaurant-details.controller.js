@@ -8,9 +8,8 @@
 
   function RestaurantDetailsController(state, RestaurantDetailsService) {
     var vm = this;
-    this.restaurantDetails = [];
 
-    getRestaurantData = function getRestaurantData() {
+    this.restaurantDetails = 
       RestaurantDetailsService.getRestaurantDetails()
         .then(function successHandler(data) {
           console.log('restaurant details retrieved, data');
@@ -19,7 +18,6 @@
         .catch(function errorHandler(xhr) {
           console.log('couldn\t get resturant data', xhr);
         });
-    };
   }
 
 
