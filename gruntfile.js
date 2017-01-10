@@ -64,6 +64,40 @@ module.exports = function(grunt) {
         }
       },
 
+      karma: {
+        options: {
+          frameworks: ['mocha', 'chai'],
+          client: {
+            mocha: {
+              ui: 'bdd'
+            }
+          },
+          browsers: ['PhantomJS'],
+          singleRun: true,
+
+          preprocessors: {
+            'src/js**/*.js': ['coverage']
+          },
+          reporters: ['dots', 'coverage'],
+          coverageReporter: {
+            type: 'text-summary'
+          }
+        },
+        posts: {
+          options: {
+            files: [
+              'node_modules/angular/angular.js',
+              'node_modules/angular-ui-router/release/angular-ui-router.js',
+              'node_modules/angular-mocks/angular-mocks.js',
+              'src/js/good-eats.module.js',
+              'src/js/posts.controller.js',
+              'src/js/posts.service.js',
+              'test/specs/posts.controller.spec.js',
+              'test/specs/posts.service.spec.js'
+            ]
+          }
+        }
+      },
       sass: {
         allStyles: {
           files: {
@@ -86,7 +120,11 @@ module.exports = function(grunt) {
         },
         js: {
           files: ['src/js/**/*.js'],
-          tasks: ['concat']
+          tasks: ['test','concat']
+        },
+        test: {
+          files: ['test/specs/**/*.js'],
+          tasks: ['test', 'karma']
         },
         sass: {
           files: ['src/sass/**/*.scss'],
@@ -99,6 +137,7 @@ module.exports = function(grunt) {
       }
     });
 
+    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -106,7 +145,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', [ 'clean', 'sass', 'copy', 'concat' ]);
+    grunt.registerTask('test', ['jshint', 'karma']);
+    grunt.registerTask('default', [ 'clean', 'test', 'sass', 'copy', 'concat' ]);
 
 };
