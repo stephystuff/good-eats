@@ -15,7 +15,16 @@
       deletePost: deletePost
     };
 
-    function createPost(dishName, restaurant, cuisineType, photo, comment) {
+    /**
+     * http request that creates a new post for dish item
+     * @param  {string} dishName    Name of dish item user wants to post
+     * @param  {string} restaurant  Name of restaurant user went to
+     * @param  {string} cuisineType The type of cuisine of dish item
+     * @param  {string} photo       Url image address of dish item
+     * @param  {string} comment     A message about the dish item
+     * @return {promise}
+     */
+    function createPost(_id, dishName, restaurant, cuisineType, photo, comment) {
       return $http({
         url: '/posts',
         data: angular.toJson({
@@ -27,7 +36,6 @@
           comment: comment
         }),
         method: 'POST',
-        dataType: 'json',
         headers: {
                 'Content-Type': 'application/json'
             }
@@ -38,6 +46,10 @@
       });
     }
 
+    /**
+     * http request that retrieves all posts
+     * @return {Promise}
+     */
     function getPosts(){
       return $http({
         url: '/posts',
@@ -49,25 +61,34 @@
       });
     }
 
+    /**
+     * Sends an http requst to retrieve a single post by id
+     * @param  {string} id The id of an individual post to retrieve
+     * @return {promise}
+     */
     function getPost(id) {
       return $http({
-        url: '/posts/' + id,
+        url: '/posts' + '/' + id,
         method: 'get',
-        // dataType: 'json'
       })
-      .then(function successHandler(data) {
-        console.log(data);
+      .then(function successHandler(response) {
+        console.log(response);
         return response.data;
       });
     }
 
+    /**
+     * Sends an http request to delete a post by id
+     * @param  {string} id The id of the post to be deleted
+     * @return {promise}
+     */
     function deletePost(id){
       return $http({
-        url: '/posts/' + id,
-        method: 'delete',
+        url: '/posts' + '/' + id,
+        method: 'delete'
       })
-      .then(function success(data){
-        console.log(data);
+      .then(function success(response){
+        console.log(response);
         return response.data;
       });
     }
