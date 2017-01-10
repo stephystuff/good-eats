@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+
   var express = require('express');
   var postsModel = require('../models/posts');
   var router = express.Router();
@@ -73,4 +74,5 @@
   });
 
   module.exports = router;
+
 }());
