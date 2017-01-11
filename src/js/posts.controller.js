@@ -7,26 +7,31 @@
     PostsController.$inject = ['$stateParams', '$state', 'PostsService'];
 
     function PostsController($stateParams, $state, PostsService) {
+      console.log('in post controller');
       var vm = this;
       this.posts = [];
       this.postsDetails = {};
+      this.singlePost = {};
       this.errorMessage = {};
 
-      PostsService.getPosts()
-        .then(function successHandler(data){
-          console.log('post data retrieved in ctrl', data);
-          vm.posts = data;
-          // return data;
-        })
-        .catch(function errorHandler(xhr){
-          console.log(xhr);
-        });
+      this.getAllPosts = function getAllPosts() {
+        PostsService.getPosts()
+          .then(function successHandler(data){
+            // console.log('post data retrieved in ctrl', data);
+            vm.posts = data;
+            // return data;
+          })
+          .catch(function errorHandler(xhr){
+            console.log(xhr);
+          });
+      };
 
       vm.getSinglePost = function getSinglePost(id) {
         console.log("starting one post");
         PostsService.getPost(id)
           .then(function successHandler(data) {
-            console.log("got one post", data);
+            vm.singlePost = data;
+            console.log("got one post", vm.singlePost);
           })
           .catch(function errorHandler(xhr) {
             console.log(xhr);
@@ -35,8 +40,9 @@
 
 
       this.addPost = function addPost() {
-        console.log("In add post");
+        console.log("In add post", this.postDetails);
         PostsService.createPost(
+          this.postDetails._id,
           this.postDetails.dishName,
           this.postDetails.restaurant,
           this.postDetails.cuisineType,
