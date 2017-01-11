@@ -14,8 +14,6 @@
         name: 'home',
         url: '/',
         templateUrl: 'views/home.template.html',
-        controller: 'HomePageController',
-        controllerAs: 'homepage'
       })
       .state({
         name: 'about-us',
@@ -23,16 +21,16 @@
         templateUrl: 'views/about-us.template.html'
       })
       .state({
-        name: 'sign-up',
-        url: '/sign-up',
-        templateUrl: 'views/sign-up.template.html',
-        controller: 'UserStatusController',
-        controllerAs: 'status'
+        name: 'posts',
+        url: '/posts',
+        templateUrl: 'views/posts.template.html',
+        controller: 'PostsController',
+        controllerAs: 'posts'
       })
       .state({
-        name: 'all-posts',
-        url: '/all-posts',
-        templateUrl: 'views/all-posts.template.html',
+        name: 'post',
+        url: '/posts/:id',
+        templateUrl: 'views/post.template.html',
         controller: 'PostsController',
         controllerAs: 'posts'
       })
