@@ -1,0 +1,32 @@
+
+
+  <a ui-sref='create-post' class='add-new-post'><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+  <ul class='post-list' >
+    <li class='post-list-item' ng-repeat='post in posts.posts'>
+      <section class="row">
+        <section class="col-sm-6 col-md-4">
+          <article class="thumbnail">
+            <img class= 'dish-photo' src='{{post.photo}}'/>
+            <main class="caption">
+              <h3>{{post.dishName}}</h3>
+              <p>{{post.comment}}</p>
+              <footer>
+                <a class="btn btn-primary" ui-sref='post({ id: post._id })' ng-click="posts.getSinglePost(post._id)">
+                  View Post
+                </a>
+                <input class="btn btn-default" ng-click='posts.removePost(id)' type="submit" value='Delete'>
+              </footer>
+            </main>
+          </article>
+        </section>
+      </section>
+    </li>
+  </ul>
+
+
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </div>
+
+  <p>{{posts.singlePost.id.dishName}}</p>

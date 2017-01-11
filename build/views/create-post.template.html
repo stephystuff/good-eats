@@ -1,0 +1,29 @@
+<form class='add-post-form' ng-submit='posts.addPost()'>
+  <h1 class='post-item'>Post New Item</h1>
+
+  <aside>
+    <label for="dish-name" ></label>
+    <input type="text" class='dish-name' placeholder='what did you eat?' ng-model='posts.postDetails.dishName'>
+  </aside>
+  <aside>
+    <label for='restaurant'></label>
+    <input type='text' class='restaurant' placeholder='restaurant' ng-model='posts.postDetails.restaurant'>
+  </aside>
+  <aside>
+    <label for='cuisine-type'></label>
+    <input type='text' class='cuisine-type' placeholder='cuisine type' ng-model='posts.postDetails.cuisineType'>
+  </aside>
+  <aside>
+    <label for='image-url'></label>
+    <input type='text' class='image-url' placeholder='paste your image url' ng-model='posts.postDetails.photo'>
+  </aside>
+  <aside>
+    <label for='comment'></label>
+    <textarea id='comment' placeholder='share your dish story...' ng-model='posts.postDetails.comment'></textarea>
+  </aside>
+  <aside>
+    <input class='submit-post' type='submit' value= 'Create Post'>
+  </aside>
+</form>
+
+<img class='eating-salad' src="../images/eating-salad.jpg" alt="" />
