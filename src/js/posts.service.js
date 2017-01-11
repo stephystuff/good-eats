@@ -56,7 +56,7 @@
         method: 'get'
       })
       .then(function returnPosts(response){
-        console.log('posts', response);
+        // console.log('posts', response);
         return response.data;
       });
     }
@@ -68,7 +68,7 @@
      */
     function getPost(id) {
       return $http({
-        url: '/posts' + '/' + id,
+        url: '/posts/' + id,
         method: 'get',
       })
       .then(function successHandler(response) {
@@ -82,9 +82,9 @@
      * @param  {string} id The id of the post to be deleted
      * @return {promise}
      */
-    function deletePost(id){
+    function deletePost(_id){
       return $http({
-        url: '/posts' + '/' + id,
+        url: '/posts' + '/' + _id,
         method: 'delete'
       })
       .then(function success(response){
