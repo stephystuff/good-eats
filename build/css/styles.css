@@ -71,9 +71,8 @@
   list-style: none; }
   .post-list li {
     margin: 0 auto; }
-  .post-list .btn-default {
-    background-color: #ba0707;
-    color: #fff; }
+  .post-list .delete {
+    color: #ba0707; }
 
 .alert {
   display: none;
@@ -113,6 +112,15 @@
     font-family: sans-serif;
     font-weight: bold;
     line-height: 70%; }
+
+.post-deleted {
+  text-align: center;
+  margin-top: 100px;
+  color: #4d9628;
+  font-size: 2em;
+  font-family: "Anton", sans-serif; }
+  .post-deleted i {
+    color: #ba0707; }
 
 .footer {
   clear: both;
