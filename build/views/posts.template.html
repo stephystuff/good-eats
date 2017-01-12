@@ -14,7 +14,7 @@
                 <a class="btn btn-primary" ui-sref='post({ id: post._id })' ng-click="posts.getSinglePost(post._id)">
                   View Post
                 </a>
-                <input class="btn btn-default" ng-click='posts.removePost(id)' type="submit" value='Delete'>
+                <input class="btn btn-default" ng-click='posts.removePost(post._id)' type="submit" value='Delete'>
               </footer>
             </main>
           </article>

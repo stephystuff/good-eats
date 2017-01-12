@@ -1,239 +1,80 @@
-.homepage {
-  margin: 0 auto;
-  background: url("../images/salad.jpg") no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
-  height: 30em; }
+/*
+Error: Undefined variable: "$signUpFormBorderColor".
+        on line 7 of src/sass/_sign-up.scss
+        from line 3 of src/sass/main.scss
 
-.title {
-  color: #fff;
-  font-family: "Anton", sans-serif;
-  font-size: 6em;
-  text-align: left;
-  margin: 0; }
+2: @import 'homepage';
+3: @import 'sign-up';
+4: @import 'all-posts';
+5: @import 'post-created';
+6: @import 'footer';
+7: @import 'header';
+8: @import 'create-post';
 
-/* tablet styles */
-@media screen and (min-width: 768px) {
-  .title {
-    text-align: center;
-    margin-right: 250px; } }
-/* Laptop Styles */
-/* Desktop Styles */
-.sign-up-form {
-  margin-top: 50px;
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding-left: 15px;
-  border: 1px solid #74BA48;
-  border-radius: 3px;
-  background-color: #fff; }
-  .sign-up-form h1 {
-    font-family: "Anton", sans-serif;
-    color: #74BA48;
-    font-size: 2em; }
-  .sign-up-form input {
-    border-radius: 4px; }
-  .sign-up-form #sign-up {
-    margin-bottom: 20px; }
-  .sign-up-form .submit {
-    color: #fff;
-    background-color: #74BA48;
-    border-color: #74BA48; }
-
-/* Tablet Styles */
-@media screen and (min-width: 768px) {
-  .sign-up-form {
-    margin: 0 auto;
-    padding: 50px 50px 50px 50px;
-    margin-top: 100px;
-    width: 400px; }
-    .sign-up-form h1 {
-      font-size: 4em; }
-    .sign-up-form input {
-      width: 200px;
-      padding: 0; } }
-/* Laptop Styles */
-@media screen and (min-width: 1024px) {
-  .sign-up-form {
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 500px; }
-    .sign-up-form h1 {
-      font-size: 5em; }
-    .sign-up-form input {
-      width: 400px;
-      padding: 10px; } }
-/* Desktop Styles */
-@media screen and (min-width: 1440px) {
-  .sign-up-form {
-    margin: 0 auto;
-    margin-top: 50px; }
-    .sign-up-form input {
-      width: 400px;
-      padding: 10px; }
-    .sign-up-form h1 {
-      font-size: 6em; } }
-.thumbnail {
-  width: 250px;
-  height: 400px;
-  margin-right: 15px; }
-
-.fa-plus-square {
-  background-color: white;
-  border-radius: 4px;
-  color: #74BA48;
-  font-size: 8em;
-  padding: 15px;
-  margin: 0 0 15px 30px; }
-
-.post-list {
-  list-style: none; }
-  .post-list li {
-    margin: 0 auto; }
-  .post-list .btn-primary {
-    background-color: #74BA48;
-    color: #fff; }
-
-.alert {
-  display: none;
-  width: 200px;
-  height: 100px; }
-
-.alert .show {
-  visibility: visible; }
-
-/* Tablet Styles */
-@media screen and (min-width: 768px) {
-  .post-list {
-    margin-left: 100px; }
-
-  .post-list-item {
-    float: left; } }
-/* Laptop Styles */
-@media screen and (min-width: 1024px) {
-  .post-list-item {
-    float: left; } }
-/* Desktop Styles */
-@media screen and (min-width: 1440px) {
-  .post-list-item {
-    float: left; } }
-.post-created {
-  text-align: center;
-  margin-top: 100px;
-  color: #74BA48;
-  font-size: 2em;
-  font-family: "Anton", sans-serif; }
-  .post-created .smiley {
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 70%; }
-  .post-created .smile {
-    -webkit-transform: rotate(90deg);
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 70%; }
-
-.navbar-default {
-  background-color: #74BA48;
-  border-color: #74BA48;
-  border-radius: 0;
-  height: 5em;
-  margin: 0; }
-  .navbar-default li:hover {
-    background-color: white; }
-  .navbar-default .navbar-nav {
-    margin-top: 10px; }
-  .navbar-default .navbar-brand {
-    margin-top: 10px;
-    font-family: "Anton", sans-serif;
-    color: #fff;
-    font-size: 2em; }
-  .navbar-default .form-control {
-    margin-top: 10px; }
-  .navbar-default button {
-    position: relative; }
-  .navbar-default .navbar-brand {
-    position: relative; }
-  .navbar-default img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px; }
-
-.add-post-form {
-  width: 200px;
-  margin-left: 10px;
-  border-radius: 3px;
-  background-color: #fff;
-  float: left; }
-  .add-post-form h1 {
-    font-family: "Anton", sans-serif;
-    color: #74BA48;
-    font-size: 2em;
-    margin: 0; }
-  .add-post-form aside {
-    margin-bottom: 20px;
-    margin-right: 0; }
-  .add-post-form #comment {
-    height: 100px;
-    border-color: #74BA48; }
-  .add-post-form input {
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #74BA48; }
-  .add-post-form .submit-post {
-    color: #fff;
-    background-color: #74BA48;
-    border-color: #74BA48; }
-
-.eating-salad {
-  width: 150px;
-  height: 200px;
-  margin-top: 30px;
-  margin-right: 20px; }
-
-/* Tablet Styles */
-@media screen and (min-width: 768px) {
-  .add-post-form {
-    width: 400px;
-    float: left; }
-    .add-post-form input {
-      width: 350px; }
-    .add-post-form textarea {
-      width: 350px; }
-
-  .eating-salad {
-    width: 300px;
-    height: 250px;
-    float: right;
-    margin-top: 50px;
-    margin-right: 50px; } }
-/* Laptop Styles */
-@media screen and (min-width: 1024px) {
-  .add-post-form {
-    font-size: 2em;
-    width: 500px; }
-    .add-post-form aside {
-      margin-bottom: 40px; }
-    .add-post-form input {
-      width: 450px; }
-    .add-post-form textarea {
-      width: 450px; }
-
-  .eating-salad {
-    width: 450px;
-    height: 400px;
-    float: right;
-    margin-top: 100px;
-    margin-right: 20px; } }
-@media screen and (min-width: 1440px) {
-  .eating-salad {
-    width: 650px;
-    height: 600px;
-    float: right;
-    margin-top: 75px;
-    margin-right: 200px;
-    padding-bottom: 40px; } }
-
-/*# sourceMappingURL=styles.css.map */
+Backtrace:
+src/sass/_sign-up.scss:7
+src/sass/main.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$signUpFormBorderColor\".\A         on line 7 of src/sass/_sign-up.scss\A         from line 3 of src/sass/main.scss\A \A 2: @import 'homepage';\A 3: @import 'sign-up';\A 4: @import 'all-posts';\A 5: @import 'post-created';\A 6: @import 'footer';\A 7: @import 'header';\A 8: @import 'create-post';"; }

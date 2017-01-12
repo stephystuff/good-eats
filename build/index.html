@@ -15,6 +15,12 @@
         <nav class="navbar navbar-default">
           <section class="container-fluid">
             <section class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <a class="navbar-brand" ui-sref="home">Good Eats</a>
             </section>
 
@@ -37,6 +43,11 @@
       </header>
 
       <main ui-view></main>
+
+      <footer class='footer'>
+        <a ui-sref='about-us'>About Us</a>
+
+      </footer>
 
       <script src='js/angular.js'></script>
       <script src='js/angular-ui-router.js'></script>
