@@ -6,14 +6,15 @@
       <section class="row">
         <section class="col-sm-6 col-md-4">
           <article class="thumbnail">
+            <h3>{{post.dishName}}</h3>
             <img class= 'dish-photo' src='{{post.photo}}'/>
             <main class="caption">
-              <h3>{{post.dishName}}</h3>
+              <h4>Find at: {{post.restaurant}}</h4>
               <p>{{post.comment}}</p>
               <footer>
-                <a class="btn btn-primary" ui-sref='post({ id: post._id })' ng-click="posts.getSinglePost(post._id)">
+                <!-- <a class="btn btn-primary" ui-sref='post({ id: post._id })' ng-click="posts.getSinglePost(post._id)">
                   View Post
-                </a>
+                </a> -->
                 <button class="btn btn-default" ng-click='posts.removePost(post._id)'>Delete</button>
               </footer>
             </main>
