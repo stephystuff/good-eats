@@ -42,6 +42,17 @@
     });
   });
 
+  router.delete('/:id([a-f0-9]{24})', function deletePost(req, res){
+    postsModel.deletePost(req.params.id, function createDeleteData(err, data){
+        if (err) {
+          console.error(err);
+          res.status(500).send('couldn\'t get your data');
+          return;
+        }
+        res.json(data);
+    });
+  });
+
   router.post('/', function createPost(req, res) {
     console.log('log 1',req.body);
 
@@ -62,16 +73,7 @@
     });
   });
 
-  router.delete('/:id([a-f0-9] {24})', function deletePost(req, res){
-    postsModel.deletePost(req.params.id, function createDeleteData(err, data){
-        if (err) {
-          console.error(err);
-          res.status(500).send('couldn\'t get your data');
-          return;
-        }
-        res.json(data);
-    });
-  });
+
 
   module.exports = router;
 
