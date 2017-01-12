@@ -25,6 +25,7 @@
             console.log(xhr);
           });
       };
+      this.getAllPosts();
 
       vm.getSinglePost = function getSinglePost(id) {
         console.log("starting one post");
@@ -63,11 +64,11 @@
         });
       };
 
-      vm.removePost = function removePost(){
+      vm.removePost = function removePost(id){
         console.log('in delete');
-        PostsService.deletePost()
-          .then(function successHandler(id){
-            console.log(id);
+        PostsService.deletePost(id)
+          .then(function successHandler(data){
+            console.log(data);
           })
           .catch(function errorHandler(xhr){
             console.log(xhr);
