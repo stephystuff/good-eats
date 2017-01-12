@@ -72,7 +72,9 @@
   .post-list li {
     margin: 0 auto; }
   .post-list .delete {
-    color: #ba0707; }
+    color: #ba0707;
+    font-size: 24px;
+    text-align: center; }
 
 .alert {
   display: none;
@@ -120,7 +122,8 @@
   font-size: 2em;
   font-family: "Anton", sans-serif; }
   .post-deleted i {
-    color: #ba0707; }
+    color: #ba0707;
+    font-size: 40px; }
 
 .footer {
   clear: both;
