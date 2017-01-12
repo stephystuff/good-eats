@@ -39,6 +39,17 @@
           });
       };
 
+      vm.removePost = function removePost(id){
+        console.log('in delete');
+        PostsService.deletePost(id)
+          .then(function successHandler(data){
+            console.log("deleted post!", data);
+          })
+          .catch(function errorHandler(xhr){
+            console.log("nope, still here", xhr);
+          });
+      };
+
 
       this.addPost = function addPost() {
         console.log("In add post", this.postDetails);
@@ -64,16 +75,7 @@
         });
       };
 
-      vm.removePost = function removePost(id){
-        console.log('in delete');
-        PostsService.deletePost(id)
-          .then(function successHandler(data){
-            console.log(data);
-          })
-          .catch(function errorHandler(xhr){
-            console.log(xhr);
-          });
-      };
+
 
       // function showMoreDetails(){
       //   console.log('clicking button');

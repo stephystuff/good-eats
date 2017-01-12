@@ -85,7 +85,7 @@
     function deletePost(id){
       return $http({
         url: '/posts/' + id,
-        method: 'delete'
+        method: 'DELETE',
       })
       .then(function success(response){
         console.log(response);
