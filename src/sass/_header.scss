@@ -2,15 +2,22 @@
   background-color: $buttonColor;
   border-color: $buttonColor;
   border-radius: 0;
-  height: 100px;
+  height: 5em;
   margin: 0;
 
   li:hover{
     background-color: white;
   }
 
+
+
   .navbar-nav{
     margin-top: 10px;
+
+    li a{
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   .navbar-brand{
@@ -20,8 +27,13 @@
     font-size: 2em;
   }
 
-  .form-control{
-    margin-top: 10px;
+  .navbar-left{
+    .btn-default{
+      margin-top: 10px;
+    }
+    .form-control{
+      margin-top: 10px;
+    }
   }
 
 
