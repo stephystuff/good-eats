@@ -82,9 +82,9 @@
      * @param  {string} id The id of the post to be deleted
      * @return {promise}
      */
-    function deletePost(_id){
+    function deletePost(id){
       return $http({
-        url: '/posts' + '/' + _id,
+        url: '/posts/' + id,
         method: 'delete'
       })
       .then(function success(response){
