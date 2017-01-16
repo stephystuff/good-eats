@@ -17,4 +17,4 @@ Good Eats allows us to share the foods that are good for our bodies and our well
     "sass": "^0.5.0"
   },
   ```
-Once file has been reviewed, launch terminal and install npm init within the project root directory. 
+- Once file has been reviewed, launch terminal and install npm init within the project root directory. 
