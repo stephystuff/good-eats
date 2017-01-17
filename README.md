@@ -14,8 +14,10 @@
 ## Development
 1. To build onto this application, fork or download the app directory.
 2. Review the ```package.json``` file. 
+    
     -Once file has been reviewed, launch terminal and install npm init within the project root directory. 
     -Upon successful installation, a ```node_modules``` folder will appear in the project directory.
+    
 3. Review the ```gruntfile.js``` file. Running ```grunt watch``` will clean the current build directory and create a new build  each time a file is saved. 
 
  
