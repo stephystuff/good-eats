@@ -6,6 +6,7 @@ Good Eats allows us to share the foods that are good for our bodies and our well
 * [Bootstrap] (https://getbootstrap.com/)
 * [SASS] (http://sass-lang.com/)
 * [jQuery] (http://jquery.com/)
+
 ## BackEnd
 * [NodeJS] (https://nodejs.org/en/)
 * [MongoDB] (https://www.mongodb.com/)
