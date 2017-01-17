@@ -14,20 +14,11 @@
 ## Development
 1. To build onto this application, fork or download the app directory.
 2. Review the ```package.json``` file. 
-``` javascript
-"dependencies": {
-    "angular": "^1.6.0",
-    "angular-ui-router": "^0.3.2",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "http-server": "^0.9.0",
-    "jquery": "^3.1.1",
-    "mongodb": "^2.2.16",
-    "oauth": "^0.9.15",
-    "sass": "^0.5.0"
-  },
-  ```
-  
-    * Once file has been reviewed, launch terminal and install npm init within the project root directory. 
-    * Upon successful installation, a ```node_modules``` folder will appear in the project directory.
+    -Once file has been reviewed, launch terminal and install npm init within the project root directory. 
+    -Upon successful installation, a ```node_modules``` folder will appear in the project directory.
 3. Review the ```gruntfile.js``` file. Running ```grunt watch``` will clean the current build directory and create a new build  each time a file is saved. 
+
+ 
+  
+  
+ 
