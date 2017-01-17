@@ -3,7 +3,9 @@
 Good Eats allows us to share the foods that are good for our bodies and our well-being. It is a means to help us discover healthy meals in new places, as well as old favorites. It's the food you'll want to share... 
 ## Front End
 Built with:
-[AngularJS] (https://angularjs.org/)
+* [AngularJS] (https://angularjs.org/)
+* [Bootstrap] (https://getbootstrap.com/)
+* [jQuery] (http://jquery.com/)
 
 ## Development
 1. To build onto this application, fork or download the app directory.
@@ -21,4 +23,4 @@ Built with:
     "sass": "^0.5.0"
   },
   ```
-- Once file has been reviewed, launch terminal and install npm init within the project root directory. 
+* Once file has been reviewed, launch terminal and install npm init within the project root directory. 
